@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: postgres
-        image: tkgs-harbor.tanzu.lab/library/postgres:9.5
+        image: postout7979/postgres:9.5
         imagePullPolicy: "Always"
         ports:
         - containerPort: 5432
