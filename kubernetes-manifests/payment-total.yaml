@@ -36,7 +36,7 @@ spec:
         service: payment
     spec:
       containers:
-      - image: tkgs-harbor.tanzu.lab/library/acmeshop-payment:latest
+      - image: postout7979/acmeshop-payment:latest
         name: payment
         env:
         - name: PAYMENT_PORT
