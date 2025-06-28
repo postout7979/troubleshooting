@@ -39,7 +39,7 @@ spec:
       - name: acmefit-cart-data
         emptyDir: {}
       containers:
-      - image: tkgs-harbor.tanzu.lab/library/acmeshop-cart:latest
+      - image: postout7979/acmeshop-cart:latest
         imagePullPolicy: "Always"
         name: cart
         env:
