@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: users-redis
-          image: tkgs-harbor.tanzu.lab/library/redis
+          image: postout7979/redis
           imagePullPolicy: Always
           resources:
             requests:
