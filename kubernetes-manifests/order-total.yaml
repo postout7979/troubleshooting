@@ -39,7 +39,7 @@ spec:
       - name: acmefit-order-data
         emptyDir: {}
       containers:
-      - image: tkgs-harbor.tanzu.lab/library/acmeshop-order:latest
+      - image: postout7979/acmeshop-order:latest
         # orderpostgres:latest
         name: order
         env:
