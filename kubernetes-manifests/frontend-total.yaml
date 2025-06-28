@@ -39,7 +39,7 @@ spec:
         service: frontend
     spec:
       containers:
-      - image: tkgs-harbor.tanzu.lab/library/acmeshop-front-end:latest
+      - image: postout7979/acmeshop-front-end:latest
         name: frontend
         env:
         - name: FRONTEND_PORT
