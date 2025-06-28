@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
         - name: cart-redis
-          image: tkgs-harbor.tanzu.lab/library/redis:v5
+          image: postout7979/redis:v5
           imagePullPolicy: Always
           resources:
             requests:
