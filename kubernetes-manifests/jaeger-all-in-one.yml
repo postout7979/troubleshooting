@@ -46,7 +46,7 @@ items:
           -   env:
               - name: COLLECTOR_ZIPKIN_HTTP_PORT
                 value: "9411"
-              image: tkgs-harbor.tanzu.lab/library/all-in-one
+              image: postout7979/all-in-one
               name: jaeger
               ports:
                 - containerPort: 5775
