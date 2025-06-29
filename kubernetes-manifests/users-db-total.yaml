@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
         - name: users-mongo
-          image: tkgs-harbor.tanzu.lab/library/mongo:4
+          image: postout7979/mongo:4
           resources:
             {}
           ports:

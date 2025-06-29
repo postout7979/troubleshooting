@@ -21,6 +21,8 @@ metadata:
   labels:
     app: acmefit
     service: catalog-db
+  annotations:
+    "sidecar.jaegertracing.io/inject": "true"
 spec:
   selector:
     matchLabels:
@@ -62,7 +64,7 @@ spec:
           emptyDir: {}
         - name: mongo-initdb
           configMap:
-            name: catalog-init-db-config
+            name: catalog-initdb-config
       imagePullSecrets:
       - name: regcred
 #        - name: mongodata

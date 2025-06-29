@@ -47,7 +47,8 @@ spec:
         - name: DATASTORE
           value: 'REMOTE'
         - name: FRONTEND_HOST
-          value: 'frontend.default.svc.cluster.local'
+          #value: '172.18.105.22'
+          value: 'frontend.acme-fitness.svc.cluster.local'
         ports:
         - containerPort: 7777
           name: pos

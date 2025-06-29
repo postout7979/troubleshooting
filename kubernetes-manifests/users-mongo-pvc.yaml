@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongodata
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: tanzu-gold
+    #storageClassName: tanzu-storage-policy
+  resources:
+    requests:
+        storage: 5Gi

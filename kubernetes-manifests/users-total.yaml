@@ -39,7 +39,7 @@ spec:
       - name: acmefit-users-data
         emptyDir: {}
       containers:
-      - image: tkgs-harbor.tanzu.lab/library/acmeshop-user:latest
+      - image: postout7979/acmeshop-user:latest
         imagePullPolicy: "Always"
         name: users
         env:

@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
         - name: cart-redis
-          image: postout7979/redis:v5
+          image: postout7979/redis:latest
           imagePullPolicy: Always
           resources:
             requests:

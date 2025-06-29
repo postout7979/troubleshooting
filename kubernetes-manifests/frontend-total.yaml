@@ -24,6 +24,8 @@ metadata:
   labels:
     app: acmefit
     service: frontend
+  annotations:
+    "sidecar.jaegertracing.io/inject": "true"
 spec:
   selector:
     matchLabels:
