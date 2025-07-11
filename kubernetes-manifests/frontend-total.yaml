@@ -11,7 +11,7 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 3000
-        #nodePort: 30430
+#      nodePort: 30430
   selector:
     app: acmefit
     service: frontend
@@ -24,8 +24,6 @@ metadata:
   labels:
     app: acmefit
     service: frontend
-  annotations:
-    "sidecar.jaegertracing.io/inject": "true"
 spec:
   selector:
     matchLabels:
@@ -41,7 +39,7 @@ spec:
         service: frontend
     spec:
       containers:
-      - image: postout7979/acmeshop-front-end:latest
+      - image: gcr.io/vmwarecloudadvocacy/acmeshop-front-end:latest
         name: frontend
         env:
         - name: FRONTEND_PORT
@@ -69,25 +67,3 @@ spec:
         ports:
         - containerPort: 3000
           name: frontend
-        readinessProbe:
-        # -- Minimum consecutive failures for the [probe] to be considered failed after having succeeded. The default is 3.
-          failureThreshold: 3
-          httpGet:
-            path: /abc/
-            port: 3000
-            scheme: HTTP
-          # -- Number of seconds after the container has started before [probe] is initiated. The default is 0.
-          initialDelaySeconds: 3
-          # -- How often (in seconds) to perform the [probe]. The default is 10.
-          periodSeconds: 3
-          # -- Minimum consecutive successes for the [probe] to be considered successful after having failed. The default is 1.
-          successThreshold: 1
-          timeoutSeconds: 1
-
-        lifecycle:
-          preStop:
-            exec:
-              command: ["sleep 10"]
-      terminationGracePeriodSeconds: 30
-
-
